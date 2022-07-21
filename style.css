@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  font-family: "Source Code Pro", monospace;
+}
+
+.calculator {
+  background: #fff;
+  width: 400px;
+
+  border-radius: 20px;
+  box-shadow: 10px 10px 40px -1px rgba(0, 0, 0, 0.32);
+}
+
+.calculator-display {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 45px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+  overflow-x: auto;
+}
+
+/* calculator scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* buttons */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.calculator-buttons button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Source Code Pro", monospace;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.calculator-buttons button:hover {
+  filter: brightness(0.98);
+}
+
+.calculator-buttons button:active {
+  transform: scale(0.98) translateY(2px);
+}
+
+.calculator-buttons button:focus {
+  outline: none;
+}
+
+.calculator-buttons .operator {
+  background-color: #858585;
+  color: #fff;
+  font-size: 30px;
+}
+
+.calculator-buttons .clear {
+  background-color: #d60f51;
+  color: #fff;
+}
+
+.calculator-buttons .equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background-color: #067d6d;
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+}
